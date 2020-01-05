@@ -1,18 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BF11B4BB"
     tools:context=".MainActivity">
+   <com.google.android.material.card.MaterialCardView
+       app:cardCornerRadius="10dp"
+       android:layout_margin="16dp"
+       app:cardBackgroundColor="#fff"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <RelativeLayout
+           android:layout_margin="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <RelativeLayout
+               android:id="@+id/travelerLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:id="@+id/travelerIv"
+                   android:layout_alignParentLeft="true"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginTop="24dp"
+                   android:layout_marginRight="12dp"
+                   android:layout_marginBottom="24dp"
+                   android:src="@drawable/ic_account_grey600_24dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+               <TextView
+                   android:layout_centerVertical="true"
+                   android:layout_toRightOf="@+id/travelerIv"
+                   android:text="1 traveler"
+                   android:textSize="16sp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+               <ImageView
+                   android:tint="#82ABE7"
+                   android:layout_marginRight="16dp"
+                   android:layout_marginTop="24dp"
+                   android:layout_marginBottom="24dp"
+                   android:src="@drawable/ic_pencil_grey600_24dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+           </RelativeLayout>
+           <RelativeLayout
+               android:background="@drawable/circular_border"
+               android:id="@+id/fromLayout"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+               android:layout_below="@+id/travelerLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginRight="12dp"
+                   android:layout_marginTop="24dp"
+                   android:layout_marginBottom="24dp"
+                   android:id="@+id/fromIv"
+                   android:src="@drawable/ic_record_circle_grey600_24dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+               <TextView
+                   android:layout_centerVertical="true"
+                   android:layout_toRightOf="@+id/fromIv"
+                   android:text="Where from?"
+                   android:textSize="16sp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+               <ImageView
+                   android:layout_below="@+id/fromIv"
+                   android:layout_marginLeft="19dp"
+                   android:layout_marginTop="-25dp"
+                   android:id="@+id/fromdot1"
+                   android:rotation="90"
+                   android:src="@drawable/ic_minus_grey600_18dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+           </RelativeLayout>
+           <ImageView
+               android:layout_below="@+id/fromLayout"
+               android:layout_marginLeft="19dp"
+               android:layout_marginTop="-10dp"
+               android:id="@+id/fromdot2"
+               android:rotation="90"
+               android:layout_alignParentLeft="true"
+               android:src="@drawable/ic_minus_grey600_18dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+           <RelativeLayout
+               android:id="@+id/toLayout"
+               android:layout_below="@+id/fromLayout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <ImageView
+                   android:layout_marginLeft="19dp"
+                   android:layout_marginTop="6dp"
+                   android:id="@+id/dot3"
+                   android:rotation="90"
+                   android:src="@drawable/ic_minus_grey600_18dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+               <ImageView
+                   android:layout_below="@+id/dot3"
+                   android:id="@+id/toIv"
+                   android:layout_marginLeft="19dp"
+                   android:layout_marginBottom="24dp"
+                   android:layout_marginRight="12dp"
+
+                   android:src="@drawable/ic_airplane_grey600_24dp"
+                   android:rotation="90"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content" />
+               <TextView
+                   android:layout_centerVertical="true"
+                   android:layout_toRightOf="@+id/toIv"
+                   android:text="Where to?"
+                   android:textSize="16sp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content" />
+           </RelativeLayout>
+       </RelativeLayout>
+
+   </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
