@@ -5,8 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BF11B4BB"
+
     tools:context=".MainActivity">
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/airport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
    <com.google.android.material.card.MaterialCardView
        app:cardCornerRadius="10dp"
        android:layout_margin="16dp"
